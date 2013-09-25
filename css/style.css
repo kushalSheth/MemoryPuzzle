@@ -1,27 +1,82 @@
 *{
-	margin : 0 auto;	
+	margin : 0 auto;
+	font-family: calibri;
+	font-size : 15px;	
 }
 
 #header{
-	font-family: calibri;
-	font-size : 15px;
 	text-align: center;
 }
 
 #container{
-	border : 1px solid;
-	height : 300px;
-	width : 500px;
+	padding : 30px 0 0 0;
+	width : 420px;
 }
 
 .tileContainer{
-	height : 200px;
-	width: 200px;
+	height : 120px;
+	width: 120px;
 	float: left;
-	margin: 20px;
+	margin: 10px;
 }
 
 .tileImg{
-	max-height: 200px;
-	max-width: 200px;
+	display: none;
+	max-height: 120px;
+	max-width: 120px;
+}
+
+.tileBackground{
+	height : 120px;
+	width : 120px;
+	background-color: #69B5D9;
+	border: 1px solid #333;
+	cursor: pointer;
+}
+
+.tilePhrase{
+	display : none;
+	height : 120px;
+	width : 120px;
+	text-align : center;
+	border: 1px solid #ccc;
+}
+
+#messageDiv{
+	display : none;
+	height : 28px;
+	width : 350px;
+	line-height : 28px;
+	text-align : center;
+	border: 1px solid #ccc;
+	background-color: #eee;
+}
+
+#disableDiv{
+	display : none;
+	height: 100%;
+	width: 100%;
+	position : fixed;
+	left : 0;
+	top : 0;
+	background-color: rgba(0,0,0,0.2);
+}
+
+#completeMsg{
+	display : none;
+	height: 100px;
+	width: 300px;
+	position : fixed;
+	left : 40%;
+	top : 35%; 
+	background-color: #eee;
+	border: 2px solid #555;
+}
+
+#playAgain{
+	height : 30px;
+	width : 100px;
+	line-height: 30px;
+	background-color: #555;
+	color: #eee;
 }
