@@ -19,7 +19,7 @@ function appInit(){
 		url : 'js/ajax/words.json',
 		dataType : 'json',
 		success : function(response){
-			response.data.splice(tilesNum);
+			shuffleTiles(response.data).splice(tilesNum);
 			tiles = response.data.concat(response.data); 
 			tiles = shuffleTiles(tiles);
 			alert(tiles.length);

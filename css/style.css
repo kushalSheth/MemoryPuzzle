@@ -9,8 +9,10 @@
 }
 
 #container{
-	padding : 30px 0 0 0;
+	margin : 20px auto 0;
 	width : 420px;
+	background : #EBF5F9;
+	border-radius : 3px;
 }
 
 .tileContainer{
@@ -48,10 +50,11 @@
 	display : none;
 	height : 28px;
 	width : 350px;
+	margin : 15px auto 0;
 	line-height : 28px;
 	text-align : center;
-	border: 1px solid #ccc;
-	background-color: #eee;
+	border: 1px solid #8AAAB8;
+	background-color: #EBF5F9;
 }
 
 #disableDiv{
@@ -65,29 +68,30 @@
 }
 
 .completeMsg{
-	display : none;
-	height: 100px;
-	width: 300px;
-	position : fixed;
-	left : 50%;
-	top : 50%;
-	margin : -50px 0 0 -150px;
-	text-align : center; 
-	background-color: #eee;
-	border: 2px solid #ccc;
+    display: none;
+    height: 120px;
+    width: 300px;
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    margin: -60px 0 0 -150px;
+	background-color: #F0F4F7;
+    border: 2px solid #ACC2C9;
+    text-align: center;
 }
 
 #playAgain{
-	height : 30px;
-	width : 100px;
-	line-height: 30px;
-	margin : 35px auto 0;
-	background-color: #ccc;
-	border: 1px solid #555;
-	cursor: pointer;
+    height: 30px;
+    width: 100px;
+	background-color: #C0CDD2;
+    line-height: 30px;
+    margin: 40px auto 0;
+    border: 1px solid #6D7A7E;
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
 }
 
 .CompleteText{
 	display: inline-block;
-    padding: 5px 0 0;
-}	
+    padding: 10px 0 0;
+}

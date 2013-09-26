@@ -27,16 +27,17 @@ app.AppView = Backbone.View.extend({
 	    		if(phrase === curPhrase){
 	    			$(".tileImg:visible").parent().children(".tileBackground").attr('flag','true');
 	    			$(".tileImg:visible").hide(0).parent().children(".tilePhrase").show(0);
-	    			$("#messageDiv").html("Removed matching Tiles!").show(0).delay(500).hide(0);
 	    			if($(".tileBackground").filter('[flag="false"]').length == 0){
 	    				new app.AppView([]);
 	    				$("#header").hide(0);
 	    				$(".completeMsg").show(0);	
+	    			}else{
+	    				$("#messageDiv").html("Removed matching Tiles!").show(0).delay(1000).hide(0);
 	    			}
 	    		}else{
 	    			$(".tileImg:visible").hide(0);
 	    			$(".tileBackground").filter('[flag="false"]').show(0);
-	    			$("#messageDiv").html("No matching Tiles!").show(0).delay(500).hide(0);
+	    			$("#messageDiv").html("No matching Tiles!").show(0).delay(1000).hide(0);
 	    		}
 	    		$("#disableDiv").hide(0);
 	    	},1000);
