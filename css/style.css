@@ -30,8 +30,9 @@
 .tileBackground{
 	height : 120px;
 	width : 120px;
-	background-color: #69B5D9;
+	background: linear-gradient(to bottom, #49BFE6, #248DAA) repeat scroll 0 0 #69B5D9;
 	border: 1px solid #306ABA;
+	border-radius : 3px;
 	cursor: pointer;
 }
 
