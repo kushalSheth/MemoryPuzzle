@@ -18,6 +18,7 @@
 	width: 120px;
 	float: left;
 	margin: 10px;
+	text-align : center;
 }
 
 .tileImg{
@@ -30,16 +31,16 @@
 	height : 120px;
 	width : 120px;
 	background-color: #69B5D9;
-	border: 1px solid #333;
+	border: 1px solid #306ABA;
 	cursor: pointer;
 }
 
 .tilePhrase{
 	display : none;
-	height : 120px;
-	width : 120px;
+	height : 65%;
+	width : 122px;
+	padding : 35% 0 0 0;
 	text-align : center;
-	border: 1px solid #ccc;
 }
 
 #messageDiv{
@@ -62,21 +63,30 @@
 	background-color: rgba(0,0,0,0.2);
 }
 
-#completeMsg{
+.completeMsg{
 	display : none;
 	height: 100px;
 	width: 300px;
 	position : fixed;
-	left : 40%;
-	top : 35%; 
+	left : 50%;
+	top : 50%;
+	margin : -50px 0 0 -150px;
+	text-align : center; 
 	background-color: #eee;
-	border: 2px solid #555;
+	border: 2px solid #ccc;
 }
 
 #playAgain{
 	height : 30px;
 	width : 100px;
 	line-height: 30px;
-	background-color: #555;
-	color: #eee;
+	margin : 35px auto 0;
+	background-color: #ccc;
+	border: 1px solid #555;
+	cursor: pointer;
 }
+
+.CompleteText{
+	display: inline-block;
+    padding: 5px 0 0;
+}	

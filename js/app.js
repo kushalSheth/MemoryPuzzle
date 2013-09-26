@@ -2,7 +2,16 @@
 var app = app || {};
 
 $(function() {
+	appInit();
 	
+	$("#playAgain").click(function(){
+		$(this).parent().hide(0);
+		$("#header").show(0);
+		appInit();
+	});
+});
+
+function appInit(){
 	var tiles = [];
 	var tilesNum = getRandomTileNum(2,4);
 	
@@ -20,8 +29,7 @@ $(function() {
 			$("#errorMessage").html("Failed to load JSON!").show(0);
 		}
 	});
-	
-});
+}
 
 function getRandomTileNum (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
