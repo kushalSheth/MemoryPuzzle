@@ -2,8 +2,10 @@
 var app = app || {};
 
 $(function() {
-	appInit();
 	
+	appInit(); 
+	
+	// Attach click on dialogBox on page load
 	$("#playAgain").click(function(){
 		$(this).parent().hide(0);
 		$("#header").show(0);
@@ -11,18 +13,25 @@ $(function() {
 	});
 });
 
+
+/** function appInit() 
+ * 		- Generates random tilNum 
+ *  	- Get model from json by AJAX
+ *  	- shuffle tiles so user gets different tiles each time
+ *  	- call Main App with random tiles from json
+ */
 function appInit(){
 	var tiles = [];
-	var tilesNum = getRandomTileNum(2,4);
+	var tilesNum = getRandomTileNum(6,12);
 	
 	$.ajax({
 		url : 'js/ajax/words.json',
 		dataType : 'json',
 		success : function(response){
-			shuffleTiles(response.data).splice(tilesNum);
-			tiles = response.data.concat(response.data); 
+			var initTiles = response.data;
+			shuffleTiles(initTiles).splice(tilesNum,(initTiles.length-tilesNum));
+			tiles = initTiles.concat(initTiles); 
 			tiles = shuffleTiles(tiles);
-			alert(tiles.length);
 			new app.AppView(tiles);
 		},
 		error : function(){
@@ -31,10 +40,22 @@ function appInit(){
 	});
 }
 
+/** function getRandomTileNum()
+ * 	
+ * @param min - lower limit
+ * @param max - upper limit
+ * @returns - Random number based on upper and lower limit
+ */
 function getRandomTileNum (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+/** function shuffleTiles()
+ * 		- Decides random numOfSwapes to be done on tiles
+ * 		- And swap tiles depending on numOfSwapes
+ * @param tiles - tiles to be displayed as array
+ * @returns - shuffled tiles 
+ */
 function shuffleTiles(tiles){
 	var noOfSwaps = getRandomTileNum((tiles.length/3), tiles.length);
 	var i1=0;

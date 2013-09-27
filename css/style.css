@@ -1,16 +1,22 @@
 *{
 	margin : 0 auto;
 	font-family: calibri;
-	font-size : 15px;	
+	font-size : 16px;	
 }
 
-#header{
+.pageBg{
+	background : #424242;	
+}
+
+#header,#counter{
+	margin : 5px auto 0;
 	text-align: center;
+	color : #E6EDF1;
 }
 
 #container{
-	margin : 20px auto 0;
 	width : 420px;
+	margin : 10px auto 0;
 	background : #EBF5F9;
 	border-radius : 3px;
 }
@@ -32,7 +38,8 @@
 .tileBackground{
 	height : 120px;
 	width : 120px;
-	background: linear-gradient(to bottom, #49BFE6, #248DAA) repeat scroll 0 0 #69B5D9;
+	background-color : #248DAA;
+	background: linear-gradient(to bottom, #49BFE6, #248DAA) repeat scroll 0 0 ;
 	border: 1px solid #306ABA;
 	border-radius : 3px;
 	cursor: pointer;
@@ -53,8 +60,8 @@
 	margin : 15px auto 0;
 	line-height : 28px;
 	text-align : center;
-	border: 1px solid #8AAAB8;
-	background-color: #EBF5F9;
+	border: 1px solid #ACC2C9;
+	background-color: #F0F4F7;
 }
 
 #disableDiv{
@@ -64,7 +71,6 @@
 	position : fixed;
 	left : 0;
 	top : 0;
-	background-color: rgba(0,0,0,0.2);
 }
 
 .completeMsg{
@@ -83,9 +89,9 @@
 #playAgain{
     height: 30px;
     width: 100px;
-	background-color: #C0CDD2;
     line-height: 30px;
     margin: 40px auto 0;
+	background-color: #C0CDD2;
     border: 1px solid #6D7A7E;
     border-radius: 4px 4px 4px 4px;
     cursor: pointer;
